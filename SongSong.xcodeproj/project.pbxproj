@@ -16,11 +16,6 @@
 		360BC3FC26DDF6850068A32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360BC3FA26DDF6850068A32F /* LaunchScreen.storyboard */; };
 		360BC41726DDFA540068A32F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360BC41626DDFA540068A32F /* Home.storyboard */; };
 		360BC41926DDFA6D0068A32F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC41826DDFA6D0068A32F /* HomeViewController.swift */; };
-		360BC41B26DDFB8A0068A32F /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC41A26DDFB8A0068A32F /* dummy.swift */; };
-		360BC41D26DDFB9E0068A32F /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC41C26DDFB9E0068A32F /* dummy.swift */; };
-		360BC41F26DDFBA50068A32F /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC41E26DDFBA50068A32F /* dummy.swift */; };
-		360BC42126DDFBB30068A32F /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42026DDFBB30068A32F /* dummy.swift */; };
-		360BC42326DDFBB90068A32F /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42226DDFBB90068A32F /* dummy.swift */; };
 		360BC42526DE54F40068A32F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42426DE54F40068A32F /* DateExtension.swift */; };
 		360BC42726DE55760068A32F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42626DE55760068A32F /* UIColorExtension.swift */; };
 		360BC42926DE5BB70068A32F /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42826DE5BB70068A32F /* UIFontExtension.swift */; };
@@ -29,6 +24,8 @@
 		360BC43026DE5D8F0068A32F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC42F26DE5D8F0068A32F /* UITableViewExtension.swift */; };
 		360BC43226DE5DAF0068A32F /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC43126DE5DAF0068A32F /* UICollectionViewExtension.swift */; };
 		360BC43426DE5E230068A32F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC43326DE5E230068A32F /* UIViewControllerExtension.swift */; };
+		360BC43626E0B6E70068A32F /* WriteSong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360BC43526E0B6E70068A32F /* WriteSong.storyboard */; };
+		360BC43826E0B6FD0068A32F /* WriteSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +42,6 @@
 		360BC3FD26DDF6850068A32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		360BC41626DDFA540068A32F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		360BC41826DDFA6D0068A32F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		360BC41A26DDFB8A0068A32F /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		360BC41C26DDFB9E0068A32F /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		360BC41E26DDFBA50068A32F /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		360BC42026DDFBB30068A32F /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		360BC42226DDFBB90068A32F /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		360BC42426DE54F40068A32F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		360BC42626DE55760068A32F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		360BC42826DE5BB70068A32F /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
@@ -58,6 +50,8 @@
 		360BC42F26DE5D8F0068A32F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		360BC43126DE5DAF0068A32F /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		360BC43326DE5E230068A32F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		360BC43526E0B6E70068A32F /* WriteSong.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteSong.storyboard; sourceTree = "<group>"; };
+		360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +153,6 @@
 		360BC40826DDF94D0068A32F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				360BC41A26DDFB8A0068A32F /* dummy.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -167,7 +160,6 @@
 		360BC40926DDF9690068A32F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				360BC42026DDFBB30068A32F /* dummy.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,7 +167,6 @@
 		360BC40A26DDF9700068A32F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				360BC42226DDFBB90068A32F /* dummy.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +176,7 @@
 			children = (
 				360BC41826DDFA6D0068A32F /* HomeViewController.swift */,
 				360BC3F326DDF6850068A32F /* ViewController.swift */,
+				360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -195,6 +187,7 @@
 				360BC3FA26DDF6850068A32F /* LaunchScreen.storyboard */,
 				360BC3F526DDF6850068A32F /* Main.storyboard */,
 				360BC41626DDFA540068A32F /* Home.storyboard */,
+				360BC43526E0B6E70068A32F /* WriteSong.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -225,7 +218,6 @@
 		360BC41426DDFA330068A32F /* TVC */ = {
 			isa = PBXGroup;
 			children = (
-				360BC41E26DDFBA50068A32F /* dummy.swift */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -233,7 +225,6 @@
 		360BC41526DDFA370068A32F /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				360BC41C26DDFB9E0068A32F /* dummy.swift */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -323,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360BC43626E0B6E70068A32F /* WriteSong.storyboard in Resources */,
 				360BC42D26DE5C720068A32F /* BinggraeSamanco.ttf in Resources */,
 				360BC42E26DE5C720068A32F /* BinggraeSamanco-Bold.ttf in Resources */,
 				360BC3FC26DDF6850068A32F /* LaunchScreen.storyboard in Resources */,
@@ -385,15 +377,11 @@
 				360BC42526DE54F40068A32F /* DateExtension.swift in Sources */,
 				360BC43426DE5E230068A32F /* UIViewControllerExtension.swift in Sources */,
 				360BC43226DE5DAF0068A32F /* UICollectionViewExtension.swift in Sources */,
-				360BC41B26DDFB8A0068A32F /* dummy.swift in Sources */,
-				360BC42126DDFBB30068A32F /* dummy.swift in Sources */,
 				360BC3F026DDF6850068A32F /* AppDelegate.swift in Sources */,
 				360BC3F226DDF6850068A32F /* SceneDelegate.swift in Sources */,
 				360BC43026DE5D8F0068A32F /* UITableViewExtension.swift in Sources */,
-				360BC41F26DDFBA50068A32F /* dummy.swift in Sources */,
-				360BC41D26DDFB9E0068A32F /* dummy.swift in Sources */,
+				360BC43826E0B6FD0068A32F /* WriteSongViewController.swift in Sources */,
 				360BC42726DE55760068A32F /* UIColorExtension.swift in Sources */,
-				360BC42326DDFBB90068A32F /* dummy.swift in Sources */,
 				360BC42926DE5BB70068A32F /* UIFontExtension.swift in Sources */,
 				360BC41926DDFA6D0068A32F /* HomeViewController.swift in Sources */,
 			);
