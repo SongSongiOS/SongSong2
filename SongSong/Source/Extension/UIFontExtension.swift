@@ -12,10 +12,11 @@ extension UIFont{
         return UIFont(name: AppFontName.regular, size: size)!
     }
 
-    @objc class func notoSansLightFont(ofSize size: CGFloat) -> UIFont {
+    @objc class func binggraeSamancoBold(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.bold, size: size)!
     }
     
   
 }
+
 
