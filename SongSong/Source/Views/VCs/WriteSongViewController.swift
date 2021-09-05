@@ -18,6 +18,7 @@ class WriteSongViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 20
         $0.tag = 1
+        $0.addTarget(self, action: #selector(selectButtonClicked(_:)), for: .touchUpInside)
     }
    
     let nextButton = UIButton().then{
@@ -43,6 +44,7 @@ class WriteSongViewController: UIViewController {
     }
 //MARK: Func
     @objc private func nextButtonClicked(_ sender: UIButton){
+        
         switch selectButton.tag{
         case 1:
             animateButton()
@@ -60,11 +62,26 @@ class WriteSongViewController: UIViewController {
             askLabel.text = "노래가사를 적어주송!"
             selectButton.tag = 4
         default:
-            print("d")
+            print("default")
         }
     }
     @objc private func selectButtonClicked(_ sender: UIButton){
-        self.selectButton.isEnabled = false
+        guard let insertVC = UIStoryboard(name: "NameCutsomView", bundle: nil).instantiateViewController(identifier: "NameCustomViewController") as? NameCustomViewController else {return}
+        
+        switch selectButton.tag {
+        case 1:
+            insertVC.tag = selectButton.tag
+            insertVC.modalPresentationStyle = .overFullScreen
+            insertVC.modalTransitionStyle = .crossDissolve
+            self.present(insertVC, animated: true, completion: nil)
+        case 2:
+            insertVC.tag = selectButton.tag
+            insertVC.modalPresentationStyle = .overFullScreen
+            insertVC.modalTransitionStyle = .crossDissolve
+            self.present(insertVC, animated: true, completion: nil)
+        default:
+            print("dasf")
+        }
     }
     
     
