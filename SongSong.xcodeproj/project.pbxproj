@@ -28,6 +28,8 @@
 		360BC43826E0B6FD0068A32F /* WriteSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */; };
 		3653CA5A26E4AEED0060A708 /* NameCutsomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3653CA5926E4AEED0060A708 /* NameCutsomView.storyboard */; };
 		3653CA5C26E4AEF90060A708 /* NameCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653CA5B26E4AEF90060A708 /* NameCustomViewController.swift */; };
+		3653CA6026E4C7C60060A708 /* Consept.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3653CA5F26E4C7C60060A708 /* Consept.storyboard */; };
+		3653CA6226E4C7D20060A708 /* ConseptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653CA6126E4C7D20060A708 /* ConseptViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteSongViewController.swift; sourceTree = "<group>"; };
 		3653CA5926E4AEED0060A708 /* NameCutsomView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameCutsomView.storyboard; sourceTree = "<group>"; };
 		3653CA5B26E4AEF90060A708 /* NameCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCustomViewController.swift; sourceTree = "<group>"; };
+		3653CA5F26E4C7C60060A708 /* Consept.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Consept.storyboard; sourceTree = "<group>"; };
+		3653CA6126E4C7D20060A708 /* ConseptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseptViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				360BC3F326DDF6850068A32F /* ViewController.swift */,
 				360BC43726E0B6FD0068A32F /* WriteSongViewController.swift */,
 				3653CA5B26E4AEF90060A708 /* NameCustomViewController.swift */,
+				3653CA6126E4C7D20060A708 /* ConseptViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				360BC41626DDFA540068A32F /* Home.storyboard */,
 				360BC43526E0B6E70068A32F /* WriteSong.storyboard */,
 				3653CA5926E4AEED0060A708 /* NameCutsomView.storyboard */,
+				3653CA5F26E4C7C60060A708 /* Consept.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 				360BC3F926DDF6850068A32F /* Assets.xcassets in Resources */,
 				360BC3F726DDF6850068A32F /* Main.storyboard in Resources */,
 				360BC41726DDFA540068A32F /* Home.storyboard in Resources */,
+				3653CA6026E4C7C60060A708 /* Consept.storyboard in Resources */,
 				3653CA5A26E4AEED0060A708 /* NameCutsomView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +396,7 @@
 				360BC43026DE5D8F0068A32F /* UITableViewExtension.swift in Sources */,
 				360BC43826E0B6FD0068A32F /* WriteSongViewController.swift in Sources */,
 				3653CA5C26E4AEF90060A708 /* NameCustomViewController.swift in Sources */,
+				3653CA6226E4C7D20060A708 /* ConseptViewController.swift in Sources */,
 				360BC42726DE55760068A32F /* UIColorExtension.swift in Sources */,
 				360BC42926DE5BB70068A32F /* UIFontExtension.swift in Sources */,
 				360BC41926DDFA6D0068A32F /* HomeViewController.swift in Sources */,
