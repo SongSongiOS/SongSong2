@@ -67,7 +67,7 @@ class WriteSongViewController: UIViewController {
     }
     @objc private func selectButtonClicked(_ sender: UIButton){
         guard let insertVC = UIStoryboard(name: "NameCutsomView", bundle: nil).instantiateViewController(identifier: "NameCustomViewController") as? NameCustomViewController else {return}
-        
+        guard let conceptVC = UIStoryboard(name: "Consept", bundle: nil).instantiateViewController(identifier: "ConseptViewController") as? ConseptViewController else {return}
         switch selectButton.tag {
         case 1:
             insertVC.tag = selectButton.tag
@@ -79,6 +79,10 @@ class WriteSongViewController: UIViewController {
             insertVC.modalPresentationStyle = .overFullScreen
             insertVC.modalTransitionStyle = .crossDissolve
             self.present(insertVC, animated: true, completion: nil)
+        case 3:
+            conceptVC.modalPresentationStyle = .overFullScreen
+            conceptVC.modalTransitionStyle = .crossDissolve
+            self.present(conceptVC, animated: true, completion: nil)
         default:
             print("dasf")
         }
