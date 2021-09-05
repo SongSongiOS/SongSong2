@@ -10,6 +10,30 @@ class WriteSongViewController: UIViewController {
     let songsongImageView = UIImageView().then{
         $0.image = UIImage(named: "songsongSmile")
     }
+    let selectButton = UIButton().then{
+        $0.setTitle("가수이름", for: .normal)
+        $0.titleLabel?.font = UIFont.binggraeSamancoRegular(ofSize: 20)
+        $0.setTitleColor(UIColor.gray, for: .normal)
+        $0.backgroundColor = UIColor.white10
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 20
+        $0.tag = 1
+    }
+   
+    let nextButton = UIButton().then{
+        $0.setTitle("입력했송!", for: .normal)
+        $0.titleLabel?.font = UIFont.binggraeSamancoBold(ofSize: 30)
+        $0.setTitleColor(UIColor.black10, for: .normal)
+        $0.backgroundColor = UIColor.white10
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 20
+        $0.addTarget(self, action: #selector(nextButtonClicked(_:)), for: .touchUpInside)
+    }
+    let askLabel = UILabel().then{
+        $0.font = UIFont.binggraeSamancoRegular(ofSize: 20)
+        $0.text = "가수가 누구송?"
+        $0.textColor = UIColor.black10
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,30 +41,43 @@ class WriteSongViewController: UIViewController {
         setLayout()
         setSongSongAnimation()
     }
+//MARK: Func
+    @objc private func nextButtonClicked(_ sender: UIButton){
+        switch selectButton.tag{
+        case 1:
+            animateButton()
+            selectButton.setTitle("노래제목", for: .normal)
+            askLabel.text = "노래제목은 무엇이송?"
+            selectButton.tag = 2
+        case 2:
+            animateButton()
+            selectButton.setTitle("장르", for: .normal)
+            askLabel.text = "장르는 뭐송?"
+            selectButton.tag = 3
+        case 3:
+            animateButton()
+            selectButton.setTitle("가사", for: .normal)
+            askLabel.text = "노래가사를 적어주송!"
+            selectButton.tag = 4
+        default:
+            print("d")
+        }
+    }
+    @objc private func selectButtonClicked(_ sender: UIButton){
+        self.selectButton.isEnabled = false
+    }
+    
     
 //MARK: Animation
+    func animateButton(){
+        UIView.animate(withDuration: 1, delay: 0, options: []){
+            self.askLabel.frame = CGRect(x: self.askLabel.frame.origin.x, y: self.askLabel.frame.origin.y, width: 1000, height: 50)
+        }
+    }
     func setSongSongAnimation(){
-        UIView.animateKeyframes(withDuration: 5, delay: 0, options: [.repeat, .autoreverse]){
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/5){
-                let scale = CGAffineTransform(translationX: -25, y: 10)
-                self.songsongImageView.transform = scale
-            }
-            UIView.addKeyframe(withRelativeStartTime: 1/5, relativeDuration: 2/5){
-                let scale = CGAffineTransform(translationX: -25, y: 0)
-                self.songsongImageView.transform = scale
-            }
-            UIView.addKeyframe(withRelativeStartTime: 2/5, relativeDuration: 3/5){
-                let scale = CGAffineTransform(translationX: 25, y: 10)
-                self.songsongImageView.transform = scale
-            }
-            UIView.addKeyframe(withRelativeStartTime: 3/5, relativeDuration: 4/5){
-                let scale = CGAffineTransform(translationX: 25, y: 0)
-                self.songsongImageView.transform = scale
-            }
-            UIView.addKeyframe(withRelativeStartTime: 4/5, relativeDuration: 5/5){
-                let scale = CGAffineTransform(translationX: 25, y: 10)
-                self.songsongImageView.transform = scale
-            }
+        UIView.animate(withDuration: 1,delay: 0,options: [.repeat, .autoreverse]){
+            let scale = CGAffineTransform(translationX: 0, y: 15)
+            self.songsongImageView.transform = scale
         }
     }
     
@@ -70,51 +107,8 @@ class WriteSongViewController: UIViewController {
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 20
         }
-        let askLabel = UILabel().then{
-            $0.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.text = "가수가 누구송?"
-            $0.textColor = UIColor.black10
-        }
-        let singerButton = UIButton().then{
-            $0.setTitle("가수이름", for: .normal)
-            $0.titleLabel?.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.setTitleColor(UIColor.gray, for: .normal)
-            $0.backgroundColor = UIColor.white10
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 20
-        }
-        let songButton = UIButton().then{
-            $0.setTitle("노래제목", for: .normal)
-            $0.titleLabel?.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.setTitleColor(UIColor.gray, for: .normal)
-            $0.backgroundColor = UIColor.white10
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 20
-        }
-        let typeButton = UIButton().then{
-            $0.setTitle("장르", for: .normal)
-            $0.titleLabel?.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.setTitleColor(UIColor.gray, for: .normal)
-            $0.backgroundColor = UIColor.white10
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 20
-        }
-        let scriptButton = UIButton().then{
-            $0.setTitle("가사(30자이내)", for: .normal)
-            $0.titleLabel?.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.setTitleColor(UIColor.gray, for: .normal)
-            $0.backgroundColor = UIColor.white10
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 20
-        }
-        let nextButton = UIButton().then{
-            $0.setTitle("입력했송!", for: .normal)
-            $0.titleLabel?.font = UIFont.binggraeSamancoBold(ofSize: 30)
-            $0.setTitleColor(UIColor.black10, for: .normal)
-            $0.backgroundColor = UIColor.white10
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 20
-        }
+        
+       
         
         self.view.addSubview(songsongImageView)
         self.view.addSubview(mentView)
@@ -122,10 +116,7 @@ class WriteSongViewController: UIViewController {
         mentView.addSubview(nameView)
         nameView.addSubview(nameLabel)
         askView.addSubview(askLabel)
-        self.view.addSubview(singerButton)
-        self.view.addSubview(songButton)
-        self.view.addSubview(typeButton)
-        self.view.addSubview(scriptButton)
+        self.view.addSubview(selectButton)
         self.view.addSubview(nextButton)
 
         
@@ -161,42 +152,22 @@ class WriteSongViewController: UIViewController {
         askLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(5)
             $0.leading.equalToSuperview().offset(10)
-            $0.width.equalTo(100)
+            $0.width.equalTo(500)
             $0.height.equalTo(50)
         }
-        singerButton.snp.makeConstraints{
+        selectButton.snp.makeConstraints{
             $0.top.equalTo(mentView.snp.bottom).offset(0)
             $0.leading.equalToSuperview().offset(30)
             $0.trailing.equalToSuperview().offset(-30)
             $0.height.equalTo(50)
         }
-        songButton.snp.makeConstraints{
-            $0.top.equalTo(mentView.snp.bottom).offset(0)
-            $0.leading.equalToSuperview().offset(30)
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.height.equalTo(50)
-        }
-        typeButton.snp.makeConstraints{
-            $0.top.equalTo(mentView.snp.bottom).offset(0)
-            $0.leading.equalToSuperview().offset(30)
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.height.equalTo(50)
-        }
-        scriptButton.snp.makeConstraints{
-            $0.top.equalTo(mentView.snp.bottom).offset(0)
-            $0.leading.equalToSuperview().offset(30)
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.height.equalTo(50)
-        }
+
         nextButton.snp.makeConstraints{
-            $0.top.equalTo(singerButton.snp.bottom).offset(20)
+            $0.top.equalTo(selectButton.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(30)
             $0.trailing.equalToSuperview().offset(-30)
             $0.height.equalTo(50)
         }
-        songButton.isHidden = true
-        typeButton.isHidden = true
-        scriptButton.isHidden = true
 
         
     }
