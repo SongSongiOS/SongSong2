@@ -12,10 +12,15 @@ class SongTextViewController: UIViewController {
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     
+    let textField = UITextView().then{
+        $0.font = UIFont.binggraeSamancoRegular(ofSize: 20)
+        $0.backgroundColor = .none
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-
+        placeholderSetting()
     }
     
     @objc private func outButtonClicked(_ sender: UIButton){
@@ -25,6 +30,28 @@ class SongTextViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func placeholderSetting() {
+        textField.delegate = self
+        textField.text = "노래가사를 적어주숑! (100자)"
+        textField.textColor = UIColor.lightGray
+        }
+        
+        // TextView Place Holder
+        func textViewDidBeginEditing(_ textView: UITextView) {
+            if textView.textColor == UIColor.lightGray {
+                textView.text = nil
+                textView.textColor = UIColor.black
+            }
+            
+        }
+        // TextView Place Holder
+        func textViewDidEndEditing(_ textView: UITextView) {
+            if textView.text.isEmpty {
+                textView.text = "노래가사를 적어주숑! (100자)"
+                textView.textColor = UIColor.lightGray
+            }
+        }
     
     
     func setLayout(){
@@ -55,12 +82,8 @@ class SongTextViewController: UIViewController {
         let backGroundImageView = UIImageView().then{
             $0.image = UIImage(named: "writeBackground")
         }
-        let textField = UITextField().then{
-            $0.placeholder = "30자 이내"
-            $0.font = UIFont.binggraeSamancoRegular(ofSize: 20)
-            $0.background = .none
-            $0.borderStyle = .none
-        }
+      
+        textField.delegate = self
         let okButton = UIButton().then{
             $0.setBackgroundImage(UIImage(named: "button1"), for: .normal)
             $0.setTitle("다썻송!", for: .normal)
@@ -112,7 +135,8 @@ class SongTextViewController: UIViewController {
         textField.snp.makeConstraints{
             $0.top.equalToSuperview().offset(30)
             $0.leading.equalToSuperview().offset(30)
-            $0.trailing.equalToSuperview().offset(0)
+            $0.trailing.equalToSuperview().offset(-30)
+            $0.height.equalTo(height * 0.4)
         }
         okButton.snp.makeConstraints{
             $0.top.equalTo(textFieldView.snp.bottom).offset(10)
@@ -124,4 +148,14 @@ class SongTextViewController: UIViewController {
     }
 
 
+}
+
+extension SongTextViewController: UITextViewDelegate{
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        guard let str = textView.text else { return true }
+        let newLength = str.count + text.count - range.length
+        return newLength <= 100
+        
+    }
+    
 }
